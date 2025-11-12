@@ -26,7 +26,7 @@ export const BorrowedBooksScreen: React.FC<Props> = () => {
       const books = await bookService.getBorrowedBooks();
       setBorrowedBooks(books);
     } catch (error) {
-      console.error('Error fetching borrowed books:', error);
+      console.log('Error fetching borrowed books:', error);
       Alert.alert('Error', 'Failed to load borrowed books');
     } finally {
       setLoading(false);
