@@ -24,7 +24,7 @@ export const BookListScreen: React.FC<Props> = ({ navigation }) => {
       const fetchedBooks = await bookService.getAllBooks();
       setBooks(fetchedBooks);
     } catch (error) {
-      console.error('Error fetching books:', error);
+      console.log('Error fetching books:', error);
       alert('Failed to load books. Please try again.');
     } finally {
       setLoading(false);
